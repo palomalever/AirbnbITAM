@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+  <head>
+        <link href="https://fonts.googleapis.com/css?family=Love+Ya+Like+A+Sister" rel="stylesheet" type = 'text/css'> 
+    <title  class = "colores" > AirbnbITAM</title>
+    <%= csrf_meta_tags %>
+
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+   
+  </head>
+
+  <body>
+  	 <!-- Navigation -->
+    <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+        <div class="container">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+               <a class="navbar-brand" href="/arrendador/index">Airbnb ITAM</a>
+                 <a class="navbar-brand" href="/mensajes/index">Mensajes</a>
+                 <a class="navbar-brand" href="/properties/index">Mis Propiedades</a>
+                 <a class="navbar-brand" href="/properties/new">Subir nueva casa</a>
+                 <a class="navbar-brand" href="/home/index">Salir</a>
+            </div>
+            <!-- Collect the nav links, forms, and other content for toggling -->
+
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav">
+                    
+                </ul>
+
+            </div>
+            <!-- /.navbar-collapse -->
+        </div>
+
+        <!-- /.container -->
+    </nav>
+    <div class="container">
+    <div class="jumbotron center">
+      <p id="sl">NOTIFICACIONES</p>
+
+      <p id="sl">Por el momento no cuentas con ellas</p>
+
+    </div>
+    </div>
+
+    <div class="container">
+    <%= yield %>
+    </div>
+    
+  </body>
+</html>

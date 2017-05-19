@@ -1,0 +1,44 @@
+<!-- Page Content -->
+
+    <div class="container">
+                        <p> djasdhsjbs </p>
+            <p> djasdhsjbs </p>
+            <p class ="colores"> Propiedades </p>
+        <div class="row">
+
+            <div class="col-md-9">
+
+                <div class="row">
+                	<% @properties.each do |property|%>
+                    <div class="col-sm-4 col-lg-4 col-md-4">
+                        <div class="thumbnail">
+                            <img src="http://placehold.it/320x300" alt="">
+                            <div class="caption">
+                                <h4 class="pull-right">$<%= property.precio%></h4>
+                                <h4><a href="#"><%=link_to property.tipo, property%></a>
+                                </h4>
+                                <p><%= property.descripcion%></p>
+                            </div>
+                            <div class="ratings">
+                                <p class="pull-right">15 reviews</p>
+                                <p>
+                                    <span class="glyphicon glyphicon-star"></span>
+                                    <span class="glyphicon glyphicon-star"></span>
+                                    <span class="glyphicon glyphicon-star"></span>
+                                    <span class="glyphicon glyphicon-star"></span>
+                                    <span class="glyphicon glyphicon-star"></span>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <%end%>
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+    <!-- /.container -->
+
+   

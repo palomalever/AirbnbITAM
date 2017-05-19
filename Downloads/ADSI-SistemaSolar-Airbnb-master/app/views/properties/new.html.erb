@@ -1,0 +1,119 @@
+
+<!DOCTYPE html>
+<html>
+  <head>
+        <link href="https://fonts.googleapis.com/css?family=Love+Ya+Like+A+Sister" rel="stylesheet" type = 'text/css'> 
+<br></br>
+<br></br>
+<p class ="tam-default"></p>
+<p class ="tam-default"> </p>
+<h1 class = "colores">SubirCasa</h1>
+
+
+<%= form_for(@property) do  |f|%>
+
+<div class="landing-page"><div class="form-appointment"><div class="wpcf7" id="wpcf7-f560-p590-o1"><form action="/landing-page-template-do-not-delete/#wpcf7-f560-p590-o1" method="post" class="wpcf7-form" novalidate="novalidate" _lpchecked="1">
+<div style="display: none;">
+<input type="hidden" name="_wpcf7" value="560">
+<input type="hidden" name="_wpcf7_version" value="3.5">
+<input type="hidden" name="_wpcf7_locale" value="">
+<input type="hidden" name="_wpcf7_unit_tag" value="wpcf7-f560-p590-o1">
+<input type="hidden" name="_wpnonce" value="dbb28877d5">
+</div>
+<div class="group">
+<div style="width: 48%; float: left;">
+
+<span class="wpcf7-form-control-wrap email-680"><input type="email" name="email-680" value="" size="45" class="wpcf7-form-control wpcf7-text wpcf7-email wpcf7-validates-as-required wpcf7-validates-as-email" aria-required="true" placeholder="Arrendador"></span><br>
+
+<%= f.text_area :direccion, placeholder:  "Dirección"%><br>
+<%= f.text_area :descripcion, placeholder:  "Descripción General (sin servicios)"%><br>
+
+
+<p> Costo 
+<%= f.text_field :precio, placeholder:  "Precio deseado"%><br>
+
+
+</p>
+<div style="text-align: center; padding-top: 2em; border-top: 1px solid rgb(153, 202, 129); margin-top: 1em;"><input type="submit" value="Subir Imagen" class="wpcf7-form-control wpcf7-submit"><img class="ajax-loader" src="http://www.professionalaudiologicalservices.com/wp-content/plugins/contact-form-7/images/ajax-loader.gif" alt="Sending ..." style="visibility: hidden;"></div>
+
+</div>
+
+
+<div style="width: 48%; float: right;">
+
+
+<h4>Tipo de propiedad:</h4>
+<p><span class="wpcf7-form-control-wrap checkbox-465"><span class="wpcf7-form-control wpcf7-checkbox"><span class="wpcf7-list-item"><label><input type="checkbox" name="checkbox-465[]" value="Cuarto">&nbsp;<span class="wpcf7-list-item-label">Cuarto</span></label></span><span class="wpcf7-list-item"><label><input type="checkbox" name="checkbox-465[]" value="Departamento">&nbsp;<span class="wpcf7-list-item-label">Departamento</span></label></span><span class="wpcf7-list-item"><label><input type="checkbox" name="checkbox-465[]" value="Casa">&nbsp;<span class="wpcf7-list-item-label">Casa</span></label></span><span class="wpcf7-list-item"><label><input type="checkbox" name="checkbox-465[]" value="Otro">&nbsp;<span class="wpcf7-list-item-label">Otro</span></label></span></p>
+<%= f.text_field :tipo, placeholder:  "Especifica el otro / Confirma el tipo"%><br><br>
+
+<h4>Fechas de Disponibilidad</h4>
+<div class="container">
+    <div class="row">
+        <div class='col-sm-4'>
+            <div class="form-group">
+                <div class='input-group date' id='datetimepicker1'>
+                    <input type='text' class="form-control" />
+                    <span class="input-group-addon">
+                        <span class="glyphicon glyphicon-calendar"></span>
+                    </span>
+                </div>
+            </div>
+        </div>
+        <script type="text/javascript">
+            $(function () {
+                $('#datetimepicker1').datetimepicker();
+            });
+        </script>
+    </div>
+</div>
+
+<h4>Servicios que ofrece</h4>
+<p>
+
+<% @services.each do |service|%>
+<div>
+<%= check_box_tag "services[]", service.id%><%=service.nombre%>
+</div>
+<% end%>
+
+
+
+<span class="wpcf7-form-control-wrap text-680"><input type="text" name="text-680" value="" size="45" class="wpcf7-form-control wpcf7-text wpcf7-validates-as-required" aria-required="true" placeholder="Especificar"></span><br>
+
+</span></span>
+
+</p>
+<div style="text-align: center; padding-top: 2em; border-top: 1px solid rgb(153, 202, 129); margin-top: 1em;"><div>
+    <%= f.submit "Subir propiedad" %>
+</div>
+<%end%>
+</div>
+  <div class="wpcf7-response-output wpcf7-display-none"></div></form></div></div></div>
+</head>
+<nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+        <div class="container">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+               <a class="navbar-brand" href="/home/index">AirbnbITAM</a>
+               <a class="navbar-brand" href="/arrendador/index">Regresa</a>
+                 
+            </div>
+            <!-- Collect the nav links, forms, and other content for toggling -->
+
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav">
+                    
+                </ul>
+
+            </div>
+            <!-- /.navbar-collapse -->
+        </div>
+        <!-- /.container -->
+    </nav>
+</html>

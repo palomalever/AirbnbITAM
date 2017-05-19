@@ -1,0 +1,18 @@
+<h1> Resultados de busqueda</h1>
+
+<p><%= link_to 'Back', new_search_path %></p>
+<% if @search.search_properties.empty? %>
+	<p>No hay resultados</p>
+<% else %>
+	<% @search.search_properties.each do |c| %>
+		<br>
+
+		<div class="div">
+			<h1><%= c.tipo %></h1>
+			<p>Precio: $<%= c.precio %></p>
+			<p>Direccion: <%= c.direccion %></p>
+			<p>Servicios: <%= c.servicios %></p>
+			<p>Descripcion: <%= c.descripcion %></p>
+		</div>
+	<% end %>
+<% end %>

@@ -1,0 +1,2 @@
+module ArrendadorHelper
+end

@@ -1,0 +1,27 @@
+<h1>Busqueda Avanzada</h1>
+
+<%= form_for @search, html: {class: "pure-form"} do |s| %>
+<!--
+	
+-->
+	<div class="field">
+		<p><%= s.label :maxPrice, "Precio Max." %> - <%= s.text_field :maxPrice, size: 10 %></p>
+	</div>
+
+	<div class="field">
+		<p><%= s.label :direccion, "Direccion" %> - <%= s.text_field :direccion, size: 10 %></p>
+	</div>
+
+	<div class="field">
+		<p><%= s.label :descripcion, "Descripcion" %> - <%= s.text_field :descripcion, size: 10 %></p>
+	</div>
+
+	<div class="field">
+		<p><%= s.label :servicios, "Servicios" %> - <%= s.text_field :servicios, size: 10 %></p>
+	</div>
+
+	<div class="actions"><%= s.submit "Buscar", class: "pure-button pure-button-primary" %></div>
+
+<% end %>
+
+<p><%= link_to 'Back', properties_path %></p>
