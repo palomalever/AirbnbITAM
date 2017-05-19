@@ -43,27 +43,31 @@
                     <span class="icon-bar"></span>
                 </button>
                 <a class="navbar-brand" href="/home/index">Airbnb ITAM</a>
-                <%=link_to "Cierra Sesion" , destroy_user_session_path, method: :delete%>
-                  <a class="navbar-brand" href="/users/sign_out">Cierra Sesion </a>
-                 <a class="navbar-brand" href="/users/sign_in">Inicia sesión</a>
-                 <a class="navbar-brand" href="/users/sign_up"> Regístrate </a>
+                <a class="navbar-brand" href="/arrendador/index">Arrendador</a>
+                <a class="navbar-brand" href="/arrendatario/index">Arrendatario</a>
+                <a class="navbar-brand" href="/users/sign_in">Inicia sesión</a>
+                <a class="navbar-brand" href="/users/sign_up"> Regístrate </a>
+
+           <!--     <%=link_to "Cierra Sesion" , destroy_user_session_path, method: :delete%>
+
+           Este es un cerrar sesion que no es relevante para el home
+                 -->
+
 
             </div>
             <!-- Collect the nav links, forms, and other content for toggling -->
 
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-
-                    
-                </ul>
-
             </div>
-            <div class="col-sm-5 center">
-				
-				
+            
+                    
+                
 
-</div>
+            
+            <div class="col-sm-5 center">
+            </div>
             <!-- /.navbar-collapse -->
-        </div>
+       </div>
         <!-- /.container -->
     </nav>
     <div class="container">
@@ -76,13 +80,8 @@
 		</div>
 		
 		<center><a href="/properties/index" target="_self" /><input type="button" name="boton"  value="Visita nuestra galeria de propiedades"/></center>
-		
-		</div>
 
 		<!-- Botones e iconos -->
-
-
-</div>
 
     <div class="container">
     <%= yield %>

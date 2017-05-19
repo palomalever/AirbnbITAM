@@ -10,7 +10,7 @@
   </head>
 
   <body>
-  	 <!-- Navigation -->
+     <!-- Navigation -->
     <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
         <div class="container">
             <!-- Brand and toggle get grouped for better mobile display -->
@@ -26,6 +26,7 @@
                  <a class="navbar-brand" href="/properties/index">Mis Rentas</a>
                  <a class="navbar-brand" href="/properties/index">Búsqueda Personalizada</a>
                  <a class="navbar-brand" href="/home/index">Salir</a>
+            
             </div>
             <!-- Collect the nav links, forms, and other content for toggling -->
 
@@ -34,18 +35,26 @@
                     
                 </ul>
 
-            </div>
+           </div>
             <!-- /.navbar-collapse -->
+    
         </div>
         <!-- /.container -->
-        <div class="jumbotron center">
-            
-
-        </div>
     </nav>
+
+    <div class="container">
+    
+    <div class="jumbotron center">
+      <p id="sl">NOTIFICACIONES</p>
+
+      <p id="sl">Por el momento no cuentas con ellas</p>
+
+    </div>
+    </div>
 
     <div class="container">
     <%= yield %>
     </div>
+    
   </body>
 </html>
